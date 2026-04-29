@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import { patchPackageJson } from "./patchPackageJson.js";
 import { patchTsconfig } from "./patchTsconfig.js";
 import { copyTemplates } from "./copyTemplates.js";
