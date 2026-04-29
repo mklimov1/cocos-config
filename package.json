@@ -1,0 +1,29 @@
+{
+  "name": "@mklimov1/cocos-config",
+  "version": "0.0.0",
+  "description": "Setup ESLint + Prettier for Cocos Creator 3.x TypeScript projects",
+  "type": "module",
+  "bin": {
+    "cocos-config": "./bin/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "files": [
+    "bin",
+    "templates"
+  ],
+  "keywords": [
+    "cocos",
+    "cocos-creator",
+    "eslint",
+    "prettier",
+    "typescript"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "25.6.0",
+    "typescript": "6.0.3"
+  }
+}
