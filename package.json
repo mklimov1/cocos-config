@@ -1,6 +1,6 @@
 {
   "name": "@mklimov1/cocos-config",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Setup ESLint + Prettier for Cocos Creator 3.x TypeScript projects",
   "type": "module",
   "bin": {
