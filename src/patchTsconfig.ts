@@ -11,7 +11,11 @@ export const patchTsconfig = (): void => {
   const tsconfigPath = join(ROOT, "tsconfig.json");
 
   const base: TsConfig = existsSync(tsconfigPath)
-    ? JSON.parse(readFileSync(tsconfigPath, "utf-8"))
+    ? JSON.parse(
+        readFileSync(tsconfigPath, "utf-8")
+          .replace(/\/\*[\s\S]*?\*\//g, "")
+          .replace(/\/\/.*/g, ""),
+      )
     : {};
 
   const merged: TsConfig = {
