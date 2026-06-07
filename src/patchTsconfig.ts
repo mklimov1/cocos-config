@@ -1,6 +1,7 @@
 import { ROOT } from "./constants.js";
 import { join } from "path";
 import { existsSync, readFileSync, writeFileSync } from "fs";
+import { parse } from "jsonc-parser";
 
 export interface TsConfig {
   compilerOptions?: Record<string, unknown>;
@@ -11,11 +12,7 @@ export const patchTsconfig = (): void => {
   const tsconfigPath = join(ROOT, "tsconfig.json");
 
   const base: TsConfig = existsSync(tsconfigPath)
-    ? JSON.parse(
-        readFileSync(tsconfigPath, "utf-8")
-          .replace(/\/\*[\s\S]*?\*\//g, "")
-          .replace(/\/\/.*/g, ""),
-      )
+    ? (parse(readFileSync(tsconfigPath, "utf-8")) ?? {})
     : {};
 
   const merged: TsConfig = {
