@@ -3,7 +3,6 @@ import { join } from "path";
 import { existsSync, readFileSync, writeFileSync } from "fs";
 
 export interface PackageJson {
-  type?: string;
   scripts?: Record<string, string>;
   devDependencies?: Record<string, string>;
   [key: string]: unknown;
@@ -28,7 +27,6 @@ export const patchPackageJson = (): void => {
     readFileSync(additionsPath, "utf-8"),
   );
 
-  pkg.type = "module";
   pkg.scripts = { ...(pkg.scripts ?? {}), ...additions.scripts };
   pkg.devDependencies = {
     ...(pkg.devDependencies ?? {}),

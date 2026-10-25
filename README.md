@@ -1,10 +1,10 @@
 # @mklimov1/cocos-config
 
-Sets up ESLint + Prettier for Cocos Creator 3.x + TypeScript projects.
+Sets up Biome (linter + formatter) for Cocos Creator 3.x + TypeScript projects.
 
 ## What it does
 
-- Copies `.prettierrc`, `.prettierignore`, `eslint.config.js` to the project root
+- Copies `biome.json` to the project root
 - Merges `compilerOptions` into the existing `tsconfig.json`
 - Adds scripts and devDependencies to `package.json`
 
@@ -25,7 +25,8 @@ npm install
 ## Scripts
 
 ```bash
-npm run lint        # check assets/**/*.ts
-npm run lint:fix    # autofix
-npm run format      # prettier
+npm run lint        # lint assets/**/*.ts
+npm run lint:fix    # lint with autofix
+npm run format      # format
+npm run check       # lint + format + organize imports, with autofix
 ```

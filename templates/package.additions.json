@@ -1,13 +1,11 @@
 {
   "scripts": {
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
-    "format": "prettier --write \"**/*.{js,ts}\""
+    "lint": "biome lint",
+    "lint:fix": "biome lint --write",
+    "format": "biome format --write",
+    "check": "biome check --write"
   },
   "devDependencies": {
-    "@eslint/js": "10.0.1",
-    "eslint": "10.4.1",
-    "prettier": "3.8.3",
-    "typescript-eslint": "8.60.1"
+    "@biomejs/biome": "2.6.3"
   }
 }
