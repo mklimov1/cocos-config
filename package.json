@@ -1,7 +1,7 @@
 {
   "name": "@mklimov1/cocos-config",
   "version": "0.0.6",
-  "description": "Setup ESLint + Prettier for Cocos Creator 3.x TypeScript projects",
+  "description": "Setup Biome for Cocos Creator 3.x TypeScript projects",
   "type": "module",
   "bin": {
     "cocos-config": "./bin/index.js"
@@ -17,8 +17,7 @@
   "keywords": [
     "cocos",
     "cocos-creator",
-    "eslint",
-    "prettier",
+    "biome",
     "typescript"
   ],
   "license": "MIT",

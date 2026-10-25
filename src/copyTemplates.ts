@@ -3,7 +3,7 @@ import { copyFileSync } from "fs";
 import { join } from "path";
 
 export const copyTemplates = (): void => {
-  const files = [".prettierrc", ".prettierignore", "eslint.config.js"];
+  const files = ["biome.json"];
 
   for (const file of files) {
     copyFileSync(join(TEMPLATES, file), join(ROOT, file));
